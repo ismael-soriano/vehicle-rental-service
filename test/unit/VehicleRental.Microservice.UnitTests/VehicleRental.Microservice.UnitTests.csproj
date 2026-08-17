@@ -1,15 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
-
         <IsPackable>false</IsPackable>
+        <NoWarn>$(NoWarn);IDE0005;CA1707</NoWarn>
     </PropertyGroup>
-
-    <ItemGroup>
-        <Compile Remove="Domain\**" />
-        <EmbeddedResource Remove="Domain\**" />
-        <None Remove="Domain\**" />
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Moq" Version="4.16.0" />
