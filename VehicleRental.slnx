@@ -1,0 +1,25 @@
+<Solution>
+    <Folder Name="/Solution Items/">
+        <File Path=".editorconfig" />
+        <File Path="Directory.Build.props" />
+        <File Path="Directory.Build.targets" />
+        <File Path="global.json" />
+    </Folder>
+    <Folder Name="/src/">
+        <Project Path="src/VehicleRental.Microservice.Api/VehicleRental.Microservice.Api.csproj" />
+        <Project Path="src/VehicleRental.Microservice.ApplicationCore/VehicleRental.Microservice.ApplicationCore.csproj" />
+        <Project Path="src/VehicleRental.Microservice.Domain/VehicleRental.Microservice.Domain.csproj" />
+        <Project Path="src/VehicleRental.Microservice.Host/VehicleRental.Microservice.Host.csproj" />
+        <Project Path="src/VehicleRental.Microservice.Infrastructure/VehicleRental.Microservice.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/test/" />
+    <Folder Name="/test/functional/">
+        <Project Path="test/functional/VehicleRental.Microservice.FunctionalTests/VehicleRental.Microservice.FunctionalTests.csproj" />
+    </Folder>
+    <Folder Name="/test/infrastructure/">
+        <Project Path="test/infrastructure/VehicleRental.Microservice.InfrastructureTests/VehicleRental.Microservice.InfrastructureTests.csproj" />
+    </Folder>
+    <Folder Name="/test/unit/">
+        <Project Path="test/unit/VehicleRental.Microservice.UnitTests/VehicleRental.Microservice.UnitTests.csproj" />
+    </Folder>
+</Solution>
