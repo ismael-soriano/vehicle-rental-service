@@ -47,17 +47,15 @@ namespace VehicleRental.Microservice.Domain.Vehicles
         /// <param name="manufactureDate">The manufacture date of the vehicle.</param>
         /// <param name="today">The current date, resolved by the caller.</param>
         /// <returns>A new <see cref="Vehicle"/> in <see cref="VehicleStatus.Available"/> status.</returns>
-        public static Vehicle Create(LicensePlate licensePlate, DateOnly manufactureDate, DateOnly today)
+        public static Vehicle Create(LicensePlate licensePlate, ManufactureDate manufactureDate, DateOnly today)
         {
-            var validatedManufactureDate = new ManufactureDate(manufactureDate, today);
-
-            if (validatedManufactureDate.AgeInYears(today) > MaxFleetAgeInYears)
+            if (manufactureDate.AgeInYears(today) > MaxFleetAgeInYears)
             {
                 throw new VehicleTooOldException(
                     $"Vehicles manufactured more than {MaxFleetAgeInYears} years ago cannot join the fleet.");
             }
 
-            return new Vehicle(VehicleId.New(), licensePlate, validatedManufactureDate, VehicleStatus.Available);
+            return new Vehicle(VehicleId.New(), licensePlate, manufactureDate, VehicleStatus.Available);
         }
     }
 }
