@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles
+namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle
 {
     /// <summary>
     /// Input message for the create vehicle use case.

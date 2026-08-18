@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using VehicleRental.Microservice.Domain.Interfaces;
 using VehicleRental.Microservice.Domain.Vehicles;
 
-namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles
+namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle
 {
     /// <summary>
     /// Handler for the Create Vehicle Use Case.

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MediatR;
 using VehicleRental.Microservice.Api.UseCases;
 using VehicleRental.Microservice.ApplicationCore.UseCases;
-using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 
 namespace VehicleRental.Microservice.Api.Vehicles
 {

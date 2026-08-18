@@ -1,4 +1,4 @@
-﻿namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles
+﻿namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle
 {
     /// <summary>
     /// Interface to define the Output Port for the Create Vehicle Use Case.

@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.DependencyInjection;
 using VehicleRental.Microservice.ApplicationCore.UseCases;
-using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 
 [assembly: CLSCompliant(false)]
 
