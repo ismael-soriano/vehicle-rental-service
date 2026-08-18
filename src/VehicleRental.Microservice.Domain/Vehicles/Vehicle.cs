@@ -57,5 +57,19 @@ namespace VehicleRental.Microservice.Domain.Vehicles
 
             return new Vehicle(VehicleId.New(), licensePlate, manufactureDate, VehicleStatus.Available);
         }
+
+        /// <summary>
+        /// Marks the vehicle as rented, changing its status to <see cref="VehicleStatus.Rented"/>.
+        /// </summary>
+        /// <exception cref="VehicleNotAvailableException">Throws if the vehicle is not available to be rented.</exception>
+        public void Rent()
+        {
+            if (Status != VehicleStatus.Available)
+            {
+                throw new VehicleNotAvailableException($"Vehicle {LicensePlate} is not available for rent.");
+            }
+
+            Status = VehicleStatus.Rented;
+        }
     }
 }
