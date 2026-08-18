@@ -2,9 +2,11 @@
 using VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle;
 using VehicleRental.Microservice.Api.UseCases.Vehicles.ListAvailableVehicles;
 using VehicleRental.Microservice.Api.UseCases.Vehicles.RentVehicle;
+using VehicleRental.Microservice.Api.UseCases.Vehicles.ReturnVehicle;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ListAvailableVehicles;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.RentVehicle;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ReturnVehicle;
 
 namespace VehicleRental.Microservice.Api.DependencyInjection
 {
@@ -18,6 +20,8 @@ namespace VehicleRental.Microservice.Api.DependencyInjection
             services.AddScoped<IListAvailableVehiclesOutputPort>(sp => sp.GetRequiredService<ListAvailableVehiclesPresenter>());
             services.AddScoped<RentVehiclePresenter>();
             services.AddScoped<IRentVehicleOutputPort>(sp => sp.GetRequiredService<RentVehiclePresenter>());
+            services.AddScoped<ReturnVehiclePresenter>();
+            services.AddScoped<IReturnVehicleOutputPort>(sp => sp.GetRequiredService<ReturnVehiclePresenter>());
             return services;
         }
     }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle;
 using VehicleRental.Microservice.Api.UseCases.Vehicles.ListAvailableVehicles;
 using VehicleRental.Microservice.Api.UseCases.Vehicles.RentVehicle;
+using VehicleRental.Microservice.Api.UseCases.Vehicles.ReturnVehicle;
 
 namespace VehicleRental.Microservice.Api.Controllers
 {
@@ -40,6 +41,16 @@ namespace VehicleRental.Microservice.Api.Controllers
             ArgumentNullException.ThrowIfNull(body);
 
             var presenter = await mediator.Send(new RentVehicleRequest(vehicleId, body.CustomerId));
+            return presenter.ActionResult;
+        }
+
+        [HttpPost("{vehicleId:guid}/return")]
+        [ProducesResponseType(typeof(ReturnVehicleResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> PostReturn(Guid vehicleId)
+        {
+            var presenter = await mediator.Send(new ReturnVehicleRequest(vehicleId));
             return presenter.ActionResult;
         }
     }
