@@ -5,6 +5,7 @@ using VehicleRental.Microservice.ApplicationCore.UseCases;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ListAvailableVehicles;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.RentVehicle;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ReturnVehicle;
 using VehicleRental.Microservice.Domain.Rentals;
 
 [assembly: CLSCompliant(false)]
@@ -28,6 +29,7 @@ namespace VehicleRental.Microservice.ApplicationCore
             services.AddScoped<IUseCase<ListAvailableVehiclesInput>, ListAvailableVehiclesUseCase>();
             services.AddScoped<RentalService>();
             services.AddScoped<IUseCase<RentVehicleInput>, RentVehicleUseCase>();
+            services.AddScoped<IUseCase<ReturnVehicleInput>, ReturnVehicleUseCase>();
             return services;
         }
     }
