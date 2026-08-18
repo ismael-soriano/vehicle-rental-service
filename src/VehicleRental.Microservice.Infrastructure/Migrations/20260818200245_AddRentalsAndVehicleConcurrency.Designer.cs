@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using VehicleRental.Microservice.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using VehicleRental.Microservice.Infrastructure.Persistence;
 namespace VehicleRental.Microservice.Infrastructure.Migrations
 {
     [DbContext(typeof(VehicleRentalDbContext))]
-    partial class VehicleRentalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260818200245_AddRentalsAndVehicleConcurrency")]
+    partial class AddRentalsAndVehicleConcurrency
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

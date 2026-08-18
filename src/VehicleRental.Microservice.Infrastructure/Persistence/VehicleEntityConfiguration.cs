@@ -32,6 +32,10 @@ namespace VehicleRental.Microservice.Infrastructure.Persistence
             builder.Property(v => v.Status)
                 .HasConversion<string>()
                 .IsRequired();
+
+            builder.Property<uint>("xmin")
+                .IsRowVersion()
+                .IsConcurrencyToken();
         }
     }
 }
