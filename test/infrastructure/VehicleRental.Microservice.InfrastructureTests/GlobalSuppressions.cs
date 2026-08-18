@@ -6,3 +6,5 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Maintainability", "CA1515:Consider making public types internal", Justification = "For avoid xUnit1027.", Scope = "type", Target = "~T:VehicleRental.Microservice.InfrastructureTests.Infrastructure.TestServerCollectionFixture")]
+[assembly: SuppressMessage("Maintainability", "CA1515:Consider making public types internal", Justification = "For avoid xUnit1027.", Scope = "type", Target = "~T:VehicleRental.Microservice.InfrastructureTests.Infrastructure.GenericInfrastructureTestServerFixture")]
+[assembly: SuppressMessage("Maintainability", "CA1515:Consider making public types internal", Justification = "For avoid xUnit1027.", Scope = "type", Target = "~T:VehicleRental.Microservice.InfrastructureTests.Infrastructure.InfrastructureTestBase")]

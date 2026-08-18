@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace VehicleRental.Microservice.InfrastructureTests.Infrastructure
 {
-    internal sealed class GenericInfrastructureTestServerFixture : IDisposable
+    public sealed class GenericInfrastructureTestServerFixture : IDisposable
     {
         public GenericInfrastructureTestServerFixture()
         {
