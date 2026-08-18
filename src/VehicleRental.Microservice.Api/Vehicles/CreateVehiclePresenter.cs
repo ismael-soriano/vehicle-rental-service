@@ -1,0 +1,20 @@
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
+using VehicleRental.Microservice.Api.UseCases;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles;
+
+namespace VehicleRental.Microservice.Api.Vehicles
+{
+    public sealed class CreateVehiclePresenter : IWebApiPresenter, ICreateVehicleOutputPort
+    {
+        public IActionResult ActionResult { get; private set; }
+
+        public void StandardHandle(CreateVehicleOutput response)
+        {
+            ArgumentNullException.ThrowIfNull(response);
+
+            var body = new CreateVehicleResponse(response.VehicleId, response.LicensePlate);
+            ActionResult = new CreatedResult($"/vehicles/{body.VehicleId}", body);
+        }
+    }
+}

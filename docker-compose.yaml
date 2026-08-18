@@ -4,6 +4,10 @@
     build:
       context: .
       dockerfile: src/VehicleRental.Microservice.Host/Dockerfile
+    environment:
+      ConnectionStrings__VehicleRental: "Host=postgres;Port=5432;Database=vehiclerental;Username=vehiclerental;Password=vehiclerental"
+    ports:
+      - "8081:8080"
   postgres:
     image: postgres:16-alpine
     environment:
