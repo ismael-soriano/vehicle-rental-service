@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using VehicleRental.Microservice.Domain.Vehicles;
 
@@ -14,6 +16,14 @@ namespace VehicleRental.Microservice.Infrastructure.Persistence
         public async Task<Vehicle> GetById(VehicleId id)
         {
             return await context.Vehicles.SingleOrDefaultAsync(v => v.Id == id);
+        }
+
+        public async Task<IReadOnlyCollection<Vehicle>> GetAvailable()
+        {
+            return await context.Vehicles
+                .AsNoTracking()
+                .Where(v => v.Status == VehicleStatus.Available)
+                .ToListAsync();
         }
     }
 }
