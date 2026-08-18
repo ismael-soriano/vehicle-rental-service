@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VehicleRental.Microservice.Domain.Rentals
+namespace VehicleRental.Microservice.Domain.Rentals.ValueObjects
 {
     /// <summary>
     /// Represents the unique technical identity of a Rental.

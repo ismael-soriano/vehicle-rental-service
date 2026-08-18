@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace VehicleRental.Microservice.Domain.Rentals
+namespace VehicleRental.Microservice.Domain.Rentals.Exceptions
 {
     /// <summary>
     /// Thrown when a customer already has an active rental and attempts to create a new rental.

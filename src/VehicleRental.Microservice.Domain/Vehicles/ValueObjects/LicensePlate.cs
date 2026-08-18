@@ -1,6 +1,7 @@
 using System;
+using VehicleRental.Microservice.Domain.Vehicles.Exceptions;
 
-namespace VehicleRental.Microservice.Domain.Vehicles
+namespace VehicleRental.Microservice.Domain.Vehicles.ValueObjects
 {
     /// <summary>
     /// Represents the license plate that uniquely identifies a vehicle for business purposes.

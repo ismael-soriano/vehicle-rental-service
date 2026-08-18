@@ -1,4 +1,6 @@
 using System;
+using VehicleRental.Microservice.Domain.Vehicles.Exceptions;
+using VehicleRental.Microservice.Domain.Vehicles.ValueObjects;
 
 namespace VehicleRental.Microservice.Domain.Vehicles
 {

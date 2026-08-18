@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using VehicleRental.Microservice.Domain.Rentals;
-using VehicleRental.Microservice.Domain.Vehicles;
+using VehicleRental.Microservice.Domain.Rentals.ValueObjects;
+using VehicleRental.Microservice.Domain.Vehicles.ValueObjects;
 
-namespace VehicleRental.Microservice.Infrastructure.Persistence
+namespace VehicleRental.Microservice.Infrastructure.Persistence.Repositories
 {
     public sealed class RentalRepository(VehicleRentalDbContext context) : IRentalRepository
     {

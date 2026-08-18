@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using VehicleRental.Microservice.Domain.Vehicles.ValueObjects;
 
 namespace VehicleRental.Microservice.Domain.Vehicles
 {

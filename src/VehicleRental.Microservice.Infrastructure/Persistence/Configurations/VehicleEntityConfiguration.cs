@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using VehicleRental.Microservice.Domain.Vehicles;
+using VehicleRental.Microservice.Domain.Vehicles.ValueObjects;
 
-namespace VehicleRental.Microservice.Infrastructure.Persistence
+namespace VehicleRental.Microservice.Infrastructure.Persistence.Configurations
 {
     internal sealed class VehicleEntityConfiguration : IEntityTypeConfiguration<Vehicle>
     {

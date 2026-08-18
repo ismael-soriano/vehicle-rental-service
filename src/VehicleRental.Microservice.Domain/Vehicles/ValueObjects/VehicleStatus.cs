@@ -1,4 +1,4 @@
-namespace VehicleRental.Microservice.Domain.Vehicles
+namespace VehicleRental.Microservice.Domain.Vehicles.ValueObjects
 {
     /// <summary>
     /// Represents the availability status of a <see cref="Vehicle"/>.

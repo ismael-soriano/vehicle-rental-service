@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using VehicleRental.Microservice.Domain.Interfaces;
 using VehicleRental.Microservice.Domain.Rentals;
 using VehicleRental.Microservice.Domain.Vehicles;
+using VehicleRental.Microservice.Domain.Vehicles.Exceptions;
+using VehicleRental.Microservice.Domain.Vehicles.ValueObjects;
 
 namespace VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ReturnVehicle
 {

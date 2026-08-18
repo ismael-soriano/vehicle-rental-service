@@ -4,6 +4,7 @@ using VehicleRental.Microservice.Domain.Interfaces;
 using VehicleRental.Microservice.Domain.Rentals;
 using VehicleRental.Microservice.Domain.Vehicles;
 using VehicleRental.Microservice.Infrastructure.Persistence;
+using VehicleRental.Microservice.Infrastructure.Persistence.Repositories;
 
 namespace VehicleRental.Microservice.Infrastructure
 {

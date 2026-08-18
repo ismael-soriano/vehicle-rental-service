@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace VehicleRental.Microservice.Domain.Rentals
+namespace VehicleRental.Microservice.Domain.Rentals.Exceptions
 {
     /// <summary>
     /// Thrown when a customer tries to return a vehicle that has already been returned (i.e., the rental is already closed).

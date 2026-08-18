@@ -1,6 +1,8 @@
 ﻿using System;
 using FluentAssertions;
 using VehicleRental.Microservice.Domain.Vehicles;
+using VehicleRental.Microservice.Domain.Vehicles.Exceptions;
+using VehicleRental.Microservice.Domain.Vehicles.ValueObjects;
 using Xunit;
 
 namespace VehicleRental.Microservice.UnitTests.Domain.Vehicles

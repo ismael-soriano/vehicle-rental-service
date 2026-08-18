@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace VehicleRental.Microservice.Domain.Vehicles
+namespace VehicleRental.Microservice.Domain.Vehicles.Exceptions
 {
     /// <summary>
     /// Thrown when a license plate is empty or whitespace.
