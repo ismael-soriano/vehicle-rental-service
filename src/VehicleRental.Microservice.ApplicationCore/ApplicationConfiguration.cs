@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.DependencyInjection;
 using VehicleRental.Microservice.ApplicationCore.UseCases;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ListAvailableVehicles;
 
 [assembly: CLSCompliant(false)]
 
@@ -22,6 +23,7 @@ namespace VehicleRental.Microservice.ApplicationCore
         public static IServiceCollection AddUseCases(this IServiceCollection services)
         {
             services.AddScoped<IUseCase<CreateVehicleInput>, CreateVehicleUseCase>();
+            services.AddScoped<IUseCase<ListAvailableVehiclesInput>, ListAvailableVehiclesUseCase>();
             return services;
         }
     }
