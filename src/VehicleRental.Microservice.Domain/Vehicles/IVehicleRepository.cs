@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace VehicleRental.Microservice.Domain.Vehicles
@@ -20,5 +21,11 @@ namespace VehicleRental.Microservice.Domain.Vehicles
         /// <param name="id">The vehicle identifier.</param>
         /// <returns>The vehicle, or <see langword="null"/> if it does not exist.</returns>
         Task<Vehicle> GetById(VehicleId id);
+
+        /// <summary>
+        /// Gets all available vehicles in the fleet.
+        /// </summary>
+        /// <returns>The collection of available vehicles.</returns>
+        Task<IReadOnlyCollection<Vehicle>> GetAvailable();
     }
 }
