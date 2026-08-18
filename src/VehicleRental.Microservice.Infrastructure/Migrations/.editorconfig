@@ -1,0 +1,7 @@
+# EF Core generates the files in this folder; they are not hand-authored and
+# should not be held to the same style/analysis rules as the rest of the
+# codebase. Regenerating a migration should never require manual style fixes.
+
+[*.cs]
+dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.IDE0240.severity = none

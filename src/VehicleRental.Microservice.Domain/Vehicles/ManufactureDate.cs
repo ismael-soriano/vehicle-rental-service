@@ -64,6 +64,12 @@ namespace VehicleRental.Microservice.Domain.Vehicles
             return age;
         }
 
+        /// <summary>
+        /// Returns the underlying <see cref="DateOnly"/> value.
+        /// </summary>
+        /// <returns>The underlying Manufacture Date value.</returns>
+        public DateOnly ToDateOnly() => _value;
+
         /// <inheritdoc/>
         public override string ToString() => _value.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 

@@ -64,6 +64,7 @@ builder.Services.AddControllers(ApiConfiguration.ConfigureControllers)
     .WithApiControllers();
 
 builder.Services.AddBaseInfrastructure(builder.Environment.IsDevelopment());
+builder.Services.AddPersistence(builder.Configuration.GetConnectionString("VehicleRental"));
 
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {

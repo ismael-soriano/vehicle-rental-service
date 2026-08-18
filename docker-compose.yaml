@@ -1,0 +1,19 @@
+﻿services:
+  vehiclerental.microservice.host:
+    image: vehiclerental.microservice.host
+    build:
+      context: .
+      dockerfile: src/VehicleRental.Microservice.Host/Dockerfile
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: vehiclerental
+      POSTGRES_USER: vehiclerental
+      POSTGRES_PASSWORD: vehiclerental
+    ports:
+      - "5432:5432"
+    volumes:
+      - vehiclerental-postgres-data:/var/lib/postgresql/data
+    
+volumes:
+  vehiclerental-postgres-data:
