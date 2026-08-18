@@ -18,6 +18,7 @@ namespace VehicleRental.Microservice.Infrastructure
             bool isDevelopment)
         {
             services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
+            services.AddSingleton(TimeProvider.System);
 
             if (!isDevelopment)
             {
