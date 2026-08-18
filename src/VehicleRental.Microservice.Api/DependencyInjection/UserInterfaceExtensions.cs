@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle;
+using VehicleRental.Microservice.Api.UseCases.Vehicles.ListAvailableVehicles;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
+using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.ListAvailableVehicles;
 
 namespace VehicleRental.Microservice.Api.DependencyInjection
 {
@@ -10,6 +12,8 @@ namespace VehicleRental.Microservice.Api.DependencyInjection
         {
             services.AddScoped<CreateVehiclePresenter>();
             services.AddScoped<ICreateVehicleOutputPort>(sp => sp.GetRequiredService<CreateVehiclePresenter>());
+            services.AddScoped<ListAvailableVehiclesPresenter>();
+            services.AddScoped<IListAvailableVehiclesOutputPort>(sp => sp.GetRequiredService<ListAvailableVehiclesPresenter>());
             return services;
         }
     }
