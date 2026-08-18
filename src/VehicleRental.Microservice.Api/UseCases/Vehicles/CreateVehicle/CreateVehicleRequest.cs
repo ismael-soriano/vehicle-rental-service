@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using MediatR;
-using VehicleRental.Microservice.Api.UseCases;
 
-namespace VehicleRental.Microservice.Api.Vehicles
+namespace VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle
 {
     public sealed class CreateVehicleRequest : IRequest<IWebApiPresenter>
     {

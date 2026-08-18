@@ -2,8 +2,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle;
 
-namespace VehicleRental.Microservice.Api.Vehicles
+namespace VehicleRental.Microservice.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using VehicleRental.Microservice.Api.Vehicles;
+using VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 
 namespace VehicleRental.Microservice.Api.DependencyInjection

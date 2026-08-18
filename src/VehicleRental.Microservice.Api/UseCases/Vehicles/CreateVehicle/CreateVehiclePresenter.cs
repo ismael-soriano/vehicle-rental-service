@@ -1,9 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using VehicleRental.Microservice.Api.UseCases;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 
-namespace VehicleRental.Microservice.Api.Vehicles
+namespace VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle
 {
     public sealed class CreateVehiclePresenter : IWebApiPresenter, ICreateVehicleOutputPort
     {

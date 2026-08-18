@@ -2,11 +2,10 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using VehicleRental.Microservice.Api.UseCases;
 using VehicleRental.Microservice.ApplicationCore.UseCases;
 using VehicleRental.Microservice.ApplicationCore.UseCases.Vehicles.CreateVehicle;
 
-namespace VehicleRental.Microservice.Api.Vehicles
+namespace VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle
 {
     public sealed class CreateVehicleRequestHandler(
         IUseCase<CreateVehicleInput> useCase,

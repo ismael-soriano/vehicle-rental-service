@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace VehicleRental.Microservice.Api.Vehicles
+namespace VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle
 {
     public sealed class CreateVehicleResponse
     {
