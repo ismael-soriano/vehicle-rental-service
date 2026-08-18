@@ -71,5 +71,19 @@ namespace VehicleRental.Microservice.Domain.Vehicles
 
             Status = VehicleStatus.Rented;
         }
+
+        /// <summary>
+        /// Marks the vehicle as returned, changing its status back to <see cref="VehicleStatus.Available"/>.
+        /// </summary>
+        /// <exception cref="VehicleNotRentedException">Throws if the vehicle is not currently rented.</exception>
+        public void Return()
+        {
+            if (Status != VehicleStatus.Rented)
+            {
+                throw new VehicleNotRentedException($"Vehicle {LicensePlate} is not currently rented.");
+            }
+
+            Status = VehicleStatus.Available;
+        }
     }
 }

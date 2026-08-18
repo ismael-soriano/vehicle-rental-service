@@ -58,5 +58,20 @@ namespace VehicleRental.Microservice.Domain.Rentals
         {
             return new Rental(RentalId.New(), vehicleId, customerId, rentedAt, returnedAt: null);
         }
+
+        /// <summary>
+        /// Marks the rental as returned.
+        /// </summary>
+        /// <param name="returnedAt">The date and time when the vehicle was returned.</param>
+        /// <exception cref="RentalAlreadyClosedException">Throws if the rental has already been returned.</exception>
+        public void Return(DateTime returnedAt)
+        {
+            if (ReturnedAt is not null)
+            {
+                throw new RentalAlreadyClosedException($"Rental {Id} has already been returned.");
+            }
+
+            ReturnedAt = returnedAt;
+        }
     }
 }

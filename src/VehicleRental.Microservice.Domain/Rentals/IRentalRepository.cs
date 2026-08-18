@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using VehicleRental.Microservice.Domain.Vehicles;
 
 namespace VehicleRental.Microservice.Domain.Rentals
 {
@@ -20,5 +21,12 @@ namespace VehicleRental.Microservice.Domain.Rentals
         /// <param name="customerId">The unique technical identity of the customer who rented the vehicle.</param>
         /// <returns>A <see cref="bool"/> representing if the customer has already an active rental registered.</returns>
         Task<bool> HasActiveRentalForCustomer(CustomerId customerId);
+
+        /// <summary>
+        /// Gets the active rental for a vehicle, if any.
+        /// </summary>
+        /// <param name="vehicleId">The unique technical identity of the vehicle.</param>
+        /// <returns>The active rental, or <see langword="null"/> if the vehicle has no active rental.</returns>
+        Task<Rental> GetActiveByVehicle(VehicleId vehicleId);
     }
 }
