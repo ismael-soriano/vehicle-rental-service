@@ -4,7 +4,7 @@ using Xunit;
 namespace VehicleRental.Microservice.FunctionalTests.Infrastructure
 {
     [Collection(TestCollections.Functional)]
-    internal abstract class FunctionalTestBase(CompositionRootTestFixture fixture) : IAsyncLifetime
+    public abstract class FunctionalTestBase(CompositionRootTestFixture fixture) : IAsyncLifetime
     {
         public const int QueueWaitingTimeInMilliseconds = 1000;
 
@@ -12,7 +12,7 @@ namespace VehicleRental.Microservice.FunctionalTests.Infrastructure
 
         public async Task InitializeAsync()
         {
-            await Task.CompletedTask;
+            await Fixture.ResetDatabaseAsync();
         }
 
         public async Task DisposeAsync()
