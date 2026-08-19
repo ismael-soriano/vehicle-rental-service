@@ -1,6 +1,8 @@
 # Sample Implementation of Hexagonal Architecture in a Microservice
 ## Index
 ### [Introduction](#introduction)
+### [Getting Started with Docker Compose](#getting-started-with-docker-compose)
+### [API Endpoints](#api-endpoints)
 ### [Clean Architecture](#clean-architecture)
 ### [Hexagonal Architecture Style](#hexagonal-architecture-style)
 - [The Left side](#the-left-side)
@@ -39,7 +41,55 @@
 ## Introduction
 Sample implementation of the Clean Architecture Principles with .NET Core. Use cases as central organizing structure, decoupled from frameworks and technology details. Built with small components that are developed and tested in isolation.
 
-This template is a Virtual Wallet applicationn which a customer can register an account then manage the balance with Deposits, Withdraws and Transfers.
+This is a personal practice project built on top of this architecture template, implementing a Vehicle Rental microservice. A vehicle rental company can manage its fleet: register new vehicles, list the vehicles currently available, rent a vehicle to a customer, and register the return of a rented vehicle.
+
+## Getting Started with Docker Compose
+
+The application can be run locally without installing any dependency other than Docker.
+
+### Prerequisites
+- Docker and Docker Compose.
+
+### Running the application
+From the repository root:
+
+```bash
+docker compose up -d
+```
+
+or just starting the docker-compose project from visual studio or rider IDEs.
+
+This starts two containers:
+- **`vehiclerental.microservice.host`**: the API itself, published on **`http://localhost:8081`**.
+- **`postgres`**: a PostgreSQL 16 instance used for persistence, published on `localhost:5432`.
+
+Once both containers are up, the API is reachable at `http://localhost:8081`, and Swagger UI is available at `http://localhost:8081/swagger`.
+
+To stop everything:
+
+```bash
+docker compose down
+```
+
+To also remove the persisted database volume (start from a completely clean database next time):
+
+```bash
+docker compose down -v
+```
+
+## API Endpoints
+
+All endpoints are exposed under the `VehiclesController`, base path `http://localhost:8081/api/vehicles`.
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/api/vehicles` | Registers a new vehicle in the fleet. Rejects vehicles manufactured more than 5 years ago. |
+| `GET` | `/api/vehicles` | Lists the vehicles currently available for rent. |
+| `POST` | `/api/vehicles/{vehicleId}/rentals` | Rents a vehicle to a customer. Rejects the request if the vehicle is not available, or if the customer already has another active rental. |
+| `POST` | `/api/vehicles/{vehicleId}/return` | Registers the return of a previously rented vehicle. |
+
+Example requests can be found in
+[`src/VehicleRental.Microservice.Host/VehicleRental.Microservice.Host.http`](src/VehicleRental.Microservice.Host/VehicleRental.Microservice.Host.http).
 
 ## Clean Architecture
 The Clean Architecture style focus on a loosely coupled implementation of use cases and it is summarized as:
