@@ -10,6 +10,6 @@ namespace VehicleRental.Microservice.Api.UseCases.Vehicles.CreateVehicle
         public string LicensePlate { get; set; }
 
         [Required]
-        required public DateOnly ManufactureDate { get; set; }
+        public required DateOnly ManufactureDate { get; set; }
     }
 }
